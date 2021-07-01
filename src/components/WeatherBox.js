@@ -36,11 +36,11 @@ import {useState, useEffect} from 'react'
             return <div className="loading"><h2>Loading...</h2></div>       //spinner
         }
         
-        let toCelcious = `${((wea.main.temp) - 263.15).toFixed(0)} °C`
+        let toCelcious = `${((wea.main.temp) - 273.15).toFixed(0)} °C`
         const icon = `https://openweathermap.org/img/wn/${wea.weather[0].icon}@2x.png` 
 
         const handleClick = () => {
-            let toFah = `${( (((wea.main.temp) - 263.15).toFixed(0)) * 1.8 + 32).toFixed(0) } °F`
+            let toFah = `${( (((wea.main.temp) - 273.15).toFixed(0)) * 1.8 + 32).toFixed(0) } °F`
             setFahren(toFah);
         }
 
